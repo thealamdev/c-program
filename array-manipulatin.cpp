@@ -1,26 +1,25 @@
 #include<iostream>
 using namespace std;
 
-/* user define function */
-
-/* print array function */
-int arrGet (int a, int b){
-     int c = a+b;
-     return c;
+/* user define funciton from here */
+int arrGet(int arr[], int n){
+    int i,arr[n];
+    for(i=0;i<n;i++){
+        cin >> arr[i];
+        return arr[i];
+    }
+     
 }
 
-/* user define function end here */
-
-/* Main function of program */
+/* main function start from here*/
 int main(){
-    int num1,num2;
-    cout << "Enter first number:";
-    cin >> num1;
-    cout << "Enter second number:";
-    cin >> num2;
-
-    cout << "The sum of those two number is " << arrGet(num1, num2);
-
+    int size,array[10];
+    cout << "Please Enter array size";
+    cin >> size;
+    
+    cout << "The array is" << arrGet(array, size);
 
     return 0;
+    
+
 }

@@ -14,22 +14,51 @@ int SearchArray(int arr[], int sizeOfArray, int t){
     int flag = 0;
     for(int i=0;i<sizeOfArray;i++){
         if(arr[i]==t){
-            flag++;
-            cout << "Target element " << t << " is found";
-            break;
-        }
-
-        else{
-          if(flag==0){
-           cout << "Target element " << t << " is not found";
-           break;
-          }
-        }
-       
+            flag ++;
+            if(flag > 0 ){
+               cout << "The target value " << t << " is found" << endl;
+            }
+        }   
+    }
+    if(flag == 0){
+        cout << "The target value " << t << " is not found" << endl;
     }
 }
 
+
+// Delete an element form array function:
+int DeleteElement(int arr[], int sizeOfArray,int DeleteElement){
+    int count=0;
+    for(int i=0;i<sizeOfArray;i++){
+        if(arr[i]==DeleteElement){
+            count ++;
+            int position = i;
+            for(int i = position;i<sizeOfArray;i++){
+                arr[i] = arr[i+1];
+            }
+        }
+    }
+
+    // print new array:
+    if(count > 0){
+        cout << "After deleting element new array is: " << endl;
+        for(int i=0;i<sizeOfArray-1;i++){
+        cout << "[" << i << "]" << "=" <<  arr[i] << endl;
+        }
+    }
+    else{
+        cout << "Deleted element is not found and old array is " << endl;
+        for(int i=0;i<sizeOfArray;i++){
+        cout << "[" << i << "]" << "=" <<  arr[i] << endl;
+        }
+    }
+     
+}
+
+
+
 int main(){
+
     // array input:
     int size;
     cout << "Enter the size of array:";
@@ -45,6 +74,13 @@ int main(){
     cout << "Enter a target value to search in array:" << endl;
     cin >> target;
     SearchArray(arr,size,target);
+
+
+    // Delete an elemet from array:
+    int element;
+    cout << "Enter  an element to delete from array: " << endl;
+    cin >> element;
+    DeleteElement(arr,size,element);
 
 
 }

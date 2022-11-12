@@ -1,25 +1,25 @@
-    cout << "Enter deleted element:";
+#include<iostream>
+using namespace std;
 
-    cin >> target;
 
-    for(i =0;i<n;i++){
-        if(arr[i] == target){
-              deleteIndex = i;
-              break;
-        }
-    }
+int main(){
+    int arr[20] ={1,2,3,4,7};
 
-     if (deleteIndex >= 0 && arr[i] == target)
-    {
-        for (i=0; i<n; i++)
-        {
-            if (i >= deleteIndex)
-            {
-                arr[i] = arr[i + 1];
+    int target = 3;
+
+    for(int i=0;i<5;i++){
+        if(arr[i]==target){
+            int pos = i;
+            
+            for(int i = pos;i<5;i++){
+                arr[i] = arr[i+1];
+                 
             }
         }
-        n--;
     }
-    else{
-        "/n Item not found";
-    }
+
+    // print the new array:
+    for(int i=0;i<4;i++){
+     cout << arr[i];
+    }             
+}

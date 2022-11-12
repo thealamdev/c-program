@@ -25,9 +25,6 @@ int SearchArray(int arr[], int sizeOfArray, int t){
            break;
           }
         }
-         
-        
-         
        
     }
 }

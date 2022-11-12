@@ -1,0 +1,1 @@
+linearSearch(arr,n,key);

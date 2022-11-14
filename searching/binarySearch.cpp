@@ -5,9 +5,9 @@ using namespace std;
 int binarySearch(int arr[],int sizeOfArray, int key){
     int start =0;
     int end = sizeOfArray;
-    while (start>=sizeOfArray)
+    while (start<=end)
     {
-        int mid = (start+sizeOfArray)/2;
+        int mid = (start+end)/2;
         if(arr[mid] == key){
            return mid;
         }
@@ -41,5 +41,5 @@ int main(){
     int target;
     cout << "Enter the target element " << endl;
     cin >> target;
-    binarySearch(arr,n,target);
+    cout << binarySearch(arr,n,target);
 }

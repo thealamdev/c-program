@@ -2,53 +2,62 @@
 #include<iostream>
 using namespace std;
 
-int CGPA(string name ,int id, int i, int totalMark){
+int CGPAandGrade(string name ,int id, int i, int totalMark){
     std::cout << i+1 << "st Student Name is " << name << std::endl;
     // printf("%d st Student Name is %s",i+1, name);
     cout << i+1 << "st Student Name is :" << id << endl;
     cout << i+1 << "st Student total mark is " << totalMark << endl;
+    
     if(totalMark>=80){
         cout << i+1 << "st student CGPA is " << 4.00 << endl;
+        cout << i+1 << "st student Grade is " << "A+" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
         
     }
     else if(totalMark>=75){
         cout << i+1 << "st student CGPA is " << 3.75 << endl;
+        cout << i+1 << "st student Grade is " << "A" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
     else if(totalMark>=70){
         cout << i+1 << "st student CGPA is " << 3.50 << endl;
+        cout << i+1 << "st student Grade is " << "A-" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
      else if(totalMark>=65){
         cout << i+1 << "st student CGPA is " << 3.25 << endl;
+        cout << i+1 << "st student Grade is " << "B+" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
      else if(totalMark>=60){
         cout << i+1 << "st student CGPA is " << 3.00 << endl;
+        cout << i+1 << "st student Grade is " << "B" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
      else if(totalMark>=55){
         cout << i+1 << "st student CGPA is " << 2.75 << endl;
+        cout << i+1 << "st student Grade is " << "B-" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
      else if(totalMark>=50){
-        cout << i+1 << "st student CGPA is " << 2.50 << endl;
+        cout << i+1 << "st student Grade is " << "C+" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
      else if(totalMark>=45){
         cout << i+1 << "st student CGPA is " << 2.25 << endl;
+        cout << i+1 << "st student Grade is " << "C" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
     
      else if(totalMark>=40){
         cout << i+1 << "st student CGPA is " << 2.00 << endl;
+        cout << i+1 << "st student Grade is " << "C-" << endl;
         cout << "-------------------" << i+1 << " student information" << "---------------" << endl;
     }
 
@@ -56,7 +65,7 @@ int CGPA(string name ,int id, int i, int totalMark){
         cout << "The student is fail";
     }
 }
-
+ 
 struct student
 {
     /* data */
@@ -112,9 +121,6 @@ int main(){
             totalMark = std[i].mid + std[i].final + std[i].assignment + std[i].attendence + std[i].quiz2;
         }
          
-        CGPA(std[i].name, std[i].id, i, totalMark);
-        
+        CGPAandGrade(std[i].name, std[i].id, i, totalMark);
     }
-    
-
 }

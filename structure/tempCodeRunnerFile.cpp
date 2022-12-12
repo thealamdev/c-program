@@ -1,3 +1,1 @@
- //  for(int i=1;i<=n;i++){
-           
-    //  }
+scanf("%s",&std[i].name);

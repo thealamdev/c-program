@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Jafor Computer/OneDrive/Desktop/c++ program",
-      "program": "c:/Users/Jafor Computer/OneDrive/Desktop/c++ program/build/Debug/outDebug",
+      "cwd": "c:/Users/Jafor Computer/OneDrive/Desktop/c++ program/structure",
+      "program": "c:/Users/Jafor Computer/OneDrive/Desktop/c++ program/structure/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

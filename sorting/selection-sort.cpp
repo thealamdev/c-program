@@ -9,7 +9,7 @@ int printArray(int arr[], int size){
 }
 
 
-int insertionSort(int arr[], int size){
+int selectionSort(int arr[], int size){
     for(int i=0;i<size-1;i++){
         int min = i;
         for(int j=i+1;j<size;j++){
@@ -38,7 +38,7 @@ int main(){
 
     
     // bubble sort:
-    insertionSort(arr,n);
+    selectionSort(arr,n);
    
 
      printArray(arr, n);

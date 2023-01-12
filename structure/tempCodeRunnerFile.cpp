@@ -1,1 +1,3 @@
-scanf("%s",&std[i].name);
+
+    cout<< "hi";
+}

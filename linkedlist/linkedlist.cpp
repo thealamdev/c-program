@@ -78,6 +78,36 @@ int main(){
     }
 
 
+// element insert in last position:
+    struct node *last;
+    int l;
+    cout << "Enter an element in last position:";
+    cin >> l;
+
+    last = new node;
+    last->data = l;
+    // last->next = NULL;
+    // end->next = last->next;
+
+    end = first;
+    
+    while (end->next != NULL)
+    {
+        if(end->next == NULL){
+          end->next = last;
+        }
+        end = end->next;
+    }
+    
+ 
+    last->next = NULL;
+    end->next = last->next;
+    end = last;
+    while(end){
+        cout << end->data;
+        end = end->next;
+    }
+
 
     
 

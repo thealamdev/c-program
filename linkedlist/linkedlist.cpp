@@ -125,7 +125,7 @@ int main(){
         if(input_m == end->data){
             middle->data = input_m;
             middle->next = end->next;
-            end->next = middle->next;
+            end->next = middle;
             break;
         }
         end = end->next;

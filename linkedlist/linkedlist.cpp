@@ -58,6 +58,10 @@ int main(){
         end = end->next;
     }
 
+    if(end->data == target){
+        cout << "Data found" << endl;
+    }
+
 
     // data insert:
     temp = head;
@@ -107,13 +111,5 @@ int main(){
         cout << end->data;
         end = end->next;
     }
-
-
-    
-
-
-
-
-    
 
 }

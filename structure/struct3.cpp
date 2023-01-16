@@ -63,8 +63,6 @@ int main(){
     last = head;
     while (last->next != NULL)
     {
-
- 
         if(last->value == target){
             cout << "found";
             break;

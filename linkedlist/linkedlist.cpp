@@ -39,7 +39,7 @@ int main(){
     temp->next = NULL;
     end = head;
     while(end){
-        cout << end->data;
+        cout << end->data << endl; 
         end = end->next;
     }
 
@@ -77,7 +77,7 @@ int main(){
 
     end = first;
     while(end){
-        cout << end->data;
+        cout << end->data << endl;
         end = end->next;
     }
 
@@ -105,11 +105,38 @@ int main(){
     
  
     last->next = NULL;
-    end->next = last->next;
-    end = last;
+    end->next = last;
+    end = first;
     while(end){
-        cout << end->data;
+        cout << end->data << endl;
         end = end->next;
     }
+
+    // Insert in middle of any position:
+    int input_m;
+    struct node *middle;
+    middle = new node;
+    cout << "Enter an element in middle:" << endl;
+    cin >> input_m;
+
+    end = first;
+    while (end->next != NULL)
+    {
+        if(input_m == end->data){
+            middle->data = input_m;
+            middle->next = end->next;
+            end->next = middle->next;
+            break;
+        }
+        end = end->next;
+    }
+
+    end = first;
+    while(end){
+        cout << end->data << endl;
+        end = end->next;
+    }
+    
+    
 
 }

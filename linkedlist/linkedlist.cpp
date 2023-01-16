@@ -43,4 +43,47 @@ int main(){
         end = end->next;
     }
 
+    // element search:
+    int target;
+    cout << "Enter a element for search" << endl;
+    cin >> target;
+
+    end = head;
+    while (end->next != NULL)
+    {
+        if(target == end->data){
+            cout << "data found" << endl;
+             break;
+        }
+        end = end->next;
+    }
+
+
+    // data insert:
+    temp = head;
+    struct node *first;
+    int f;
+    cout << "Enter an element in first position:";
+    cin >> f;
+
+    first = new node;
+    first->data = f;
+    first->next = temp;
+
+
+    end = first;
+    while(end){
+        cout << end->data;
+        end = end->next;
+    }
+
+
+
+    
+
+
+
+
+    
+
 }

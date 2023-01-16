@@ -1,20 +1,46 @@
 #include<iostream>
 using namespace std;
 
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+
+
 int main(){
-    int num1=4;
-    int num2=6;
+    int input;
+    struct node *head, *temp, *end;
+    head = new node;
 
-    int *p1,*p2;
+    cout << "Enter first element:" << endl;
+    cin >> head->data;
 
-    p1 = &num1;
-    p2 = &num2;
+    cout << "Enter second element" << endl;
+    cin >> input;
 
-    cout <<  num1 << endl;
-    cout << num2 <<  endl;
+    temp = head;
 
-    cout <<  *p1 << endl;
-    cout << *p2 <<  endl;
+    while (input > 0)
+    {
+        
+        end = new node;
+        end->data = input;
+        temp->next = end;
+        temp = temp->next;
 
+
+        // decriment part or condition false part:
+        cout << "Enter thired element" << endl;
+        cin >> input;
+    }
+    
+    temp->next = NULL;
+    end = head;
+    while(end){
+        cout << end->data;
+        end = end->next;
+    }
 
 }

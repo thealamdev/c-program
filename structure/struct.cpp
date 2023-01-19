@@ -23,4 +23,5 @@ int main()
         }
         a[j+1]=temp;
     }
-    printf("Sort array
+    printf("Sort array");
+}

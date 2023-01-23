@@ -81,7 +81,7 @@ int main(){
             break;
         }
 
-// middle insert
+        // middle insert
         else if(insert > end->data && insert < end->next->data){
             minsert = new node;
             minsert->data = insert;
@@ -91,10 +91,11 @@ int main(){
             break;
         }
 
-        else if(end->next == NULL || insert <= end->next->data){
+       //last insert
+        else if(end == NULL){
             linsert = new node;
             linsert->data = insert;
-            linsert->next = end->next;
+            linsert->next = NULL;
             end->next = linsert;
             break;
         }
@@ -108,6 +109,7 @@ int main(){
         end = end->next;
     }
 
+cout << linsert->data;
     
     
 

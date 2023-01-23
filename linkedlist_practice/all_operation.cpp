@@ -92,7 +92,7 @@ int main(){
         }
 
        //last insert
-        else if(end == NULL){
+        else if(end->next == NULL){
             linsert = new node;
             linsert->data = insert;
             linsert->next = NULL;
